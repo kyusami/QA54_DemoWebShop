@@ -1,18 +1,9 @@
 import os
-import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
-@pytest.fixture
-def driver():
-    driver = webdriver.Chrome()
-    driver.get("https://demowebshop.tricentis.com/")
 
-    yield driver
-
-    driver.quit()
 
 class TestLogin:
 
